@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição.</p>
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um número : ')) // Retorna valor string
+        var n2 = Number.parseInt(window.prompt('Digite outro número : ')) // Retorna valor string
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é: ${s} `) // sinal de + para concatenação
+        // (number + number) para adição. ex: 4 + 2 == 6
+        // (string + string) para concatenação - "Agrupamento dos caracteres"-. ex: 4 + 2 == 42
+    </script>
+</body>
+</html>
