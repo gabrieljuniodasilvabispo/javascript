@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>País de origem</h1>
+
+    Seu país é: <input type="text" name="tpais" id="txtpais">
+    <input type="submit" value="Verificar a nacionalidade" onclick="verificar()">
+    <div id="origem">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var país = window.document.getElementById('txtpais')
+            var origem = window.document.getElementById('origem')
+
+            if(país.value == 'brasil') {
+                window.document.write = '<p>Você é Brasileiro.</p>'
+            }
+
+            else {
+                window.document.write = '</p>Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
