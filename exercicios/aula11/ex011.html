@@ -19,13 +19,11 @@
         function verificar() {
             var país = window.document.getElementById('txtpais')
             var origem = window.document.getElementById('origem')
-
-            if(país.value == 'brasil') {
-                window.document.write = '<p>Você é Brasileiro.</p>'
+            if (país.value == 'brasil') {
+                origem.innerHTML = 'Você é Brasileiro.'
             }
-
             else {
-                window.document.write = '</p>Você é estrangeiro'
+                origem.innerHTML = 'Você é estrangeiro.'
             }
         }
     </script>
