@@ -26,6 +26,12 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.397);
 }
 
+section > div > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 footer {
     color: white;
     font-style: italic;
