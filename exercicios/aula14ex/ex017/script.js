@@ -21,13 +21,8 @@ function contador(){
             p = 1
         }
 
-        while (ni < nf) {
+        while (ni <= nf) {
             ni += p
-            res.innerHTML += `${ni}\u{1F449}`
-        }
-
-        while (ni >= nf) {
-            ni -= p
             res.innerHTML += `${ni}\u{1F449}`
         }
         res.innerHTML += '\u{1F3C1}'
