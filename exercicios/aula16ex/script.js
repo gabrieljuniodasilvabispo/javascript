@@ -29,20 +29,31 @@ function adicionar() {
         let item = document.createElement('option')
         item.text = `O valor ${num.value} foi adicionado`
         lista.appendChild(item)
-
-        while (Number(num.value) != -1) {
-            soma = soma + Number(num.value)
-            media = soma / i++  
-        }
     }
     else {
         window.alert('Valor inválido ou já encontrado na lista')
     }
+    num.value = ''
+    num.focus()
 }
 
 function finalizar() {
-    res.innerHTML += `Essa lista tem ${valores.length} números. <br>`
-    res.innerHTML += `O maior número dessa lista é ${valores}. <br>`
-    res.innerHTML += `A soma dos valores dessa lista é ${soma}<br>`
-    res.innerHTML += `A média dos valores dessa lista é ${soma/valores.length}<br>`
+    if (valores.length == 0) {
+        window.alert('Adicione valores.')
+    } else {
+        let maior = valores[0]
+        let menor = valores[0]
+        for (let pos in valores) {
+            soma += valores[pos]
+            if (valores[pos] > maior)
+                maior = valores[pos]
+            else if (valores[pos] < menor)
+                menor = valores[pos]
+        }
+
+        res.innerHTML += `Essa lista tem ${valores.length} números. <br>`
+        res.innerHTML += `O maior valor informado é ${maior} e o menor valor informado é ${menor}. <br>`
+        res.innerHTML += `A soma dos valores dessa lista é ${soma}.<br>`
+        res.innerHTML += `A média dos valores dessa lista é ${soma/valores.length}.<br>`
+    }
 }
