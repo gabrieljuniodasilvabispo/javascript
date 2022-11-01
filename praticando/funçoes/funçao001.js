@@ -1,3 +1,12 @@
+function somando(a, b) {
+    return a + b
+}
+
+var adicao = somando(10, 5)
+
+console.log(adicao)
+
+//--------------------------------------------------------------------------------------
 let soma = 0
 let array = [1, 2, 3, 4]
 
