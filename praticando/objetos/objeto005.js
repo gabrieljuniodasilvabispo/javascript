@@ -5,21 +5,29 @@ class contaBanco {
     tipo;
     status;
 
-    constructor(conta, dono, tipo){
-        this.numConta = conta
-        this.dono = dono
-        this.tipo = tipo
+    constructor(){
         this.saldo = 0
         this.status = false
     }
     abrirConta(novoDono, novoTipo){
         this.dono = novoDono
-        this.dono = novoTipo
+        this.tipo = novoTipo
         this.status = true
-        this.saldo = 0
+        if(tipo == 'corrente'){
+            this.saldo = 50
+        } else {
+            this.saldo = 150
+        }
     }
     fecharConta(){
-        this.status = false
+        let situaçao2 = ''
+        if(this.saldo == 0){
+            this.status = false
+        } else if(this.saldo < 0){
+            situaçao2 = 'Você não pode fechar com a conta em negativo'
+        } else {
+            situaçao2 = 'Você mão pode fechaar uma conta ainda com dinheiro nela, retire o dinheiro.'
+        }
     }
     depositar(valorDepositado){
         let situaçao = ''
@@ -30,7 +38,16 @@ class contaBanco {
         }
     }
     sacar(valorSacado){
-        this.saldo -= valorSacado
+        let situaçaoSaque = ''
+        if(getStatus()){
+            if(this.saldo > valorSacado){
+                this.saldo -= valorSacado
+            } else {
+                situaçaoSaque = 'Saldo insuficiente'
+            }
+        } else {
+            situaçaoSaque = 'Abra uma conta primeiro.'
+        }
     }
     getNumConta(){
         return this.numConta
@@ -65,5 +82,5 @@ class contaBanco {
 }
 
 
-let conta1 = new contaBanco(1, 'José', 'poupança')
-let conta2 = new contaBanco(2, 'Cleusa', 'corrente')
+let conta1 = new contaBanco()
+let conta2 = new contaBanco()
