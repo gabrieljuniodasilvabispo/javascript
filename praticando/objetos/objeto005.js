@@ -49,34 +49,34 @@ class contaBanco {
             situaçaoSaque = 'Abra uma conta primeiro.'
         }
     }
-    getNumConta(){
+    get getNumConta(){
         return this.numConta
     }
-    setNumConta(novoValorConta){
+    set setNumConta(novoValorConta){
         this.numConta = novoValorConta
     }
-    getDono(){
+    get getDono(){
         return this.dono
     }
-    setDono(novoValorDono){
+    set setDono(novoValorDono){
         this.numConta = novoValorDono
     }
-    getSaldo(){
+    get getSaldo(){
         return this.saldo
     }
-    setSaldo(novoValorSaldo){
+    set setSaldo(novoValorSaldo){
         this.saldo = novoValorSaldo
     }
-    getTipo(){
+    get getTipo(){
         return this.tipo
     }
-    setTipo(novoTipo){
+    set setTipo(novoTipo){
         this.tipo = novoTipo
     }
-    getStatus(){
+    get getStatus(){
         return this.status
     }
-    setStatus(novoStatus){
+    set setStatus(novoStatus){
         this.status = novoStatus
     }
 }
