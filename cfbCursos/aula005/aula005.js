@@ -9,8 +9,8 @@ console.log(`${array1} e ${array2}`)
 console.log(array3)*/
 
 /*EXEMPLO 2
-const jogador1 = {nome:'Gabriel', energia:100, vidas:3}
-const jogador2 = {nome:'Bernardo', energia:100, vidas:5}
+const jogador1 = {nome:'Gabriel', energia:100, vidas:3, magia:90}
+const jogador2 = {nome:'Bernardo', energia:100, vidas:5, velocidade: 80}
 const jogador3 = {...jogador1, ...jogador2}
 
 console.log(jogador3)*/
