@@ -1,3 +1,5 @@
+// Diferença de função anônima padrão para função anônima arrow
+
 function aluno(nome, nota){
     this.nome = nome
     this.nota = nota

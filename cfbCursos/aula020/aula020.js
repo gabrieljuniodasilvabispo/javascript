@@ -22,6 +22,5 @@ removeButton.addEventListener("click", (el)=>{
     const selectedRemoveCursos = [...document.querySelectorAll(".selected")]
     selectedRemoveCursos.map((el)=>{
         conteiner1.appendChild(el)
-        conteiner2.remove(el)
     })
 })
