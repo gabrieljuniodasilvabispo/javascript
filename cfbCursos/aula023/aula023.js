@@ -1,4 +1,4 @@
-// CRIANDO UM NOVO ELEMENTO
+// Removendo um elemento
 
 let conteiner1 = document.querySelector(".conteiner1")
 let btn_c = [...document.querySelectorAll(".curso")]
@@ -9,11 +9,13 @@ cursos.map((el, chave)=>{
     newElement.setAttribute("id","c"+chave) // Aduicionando o id dinamicamente
     newElement.setAttribute("class", "curso c1")
     newElement.innerHTML = el
+
+    const btn_trash = document.createElement("img")
+    btn_trash.setAttribute("src","./lixeira.png")
+    btn_trash.addEventListener("click", (evt)=>{
+        conteiner1.removeChild(evt.target.parentNode)
+    })
+
+    newElement.appendChild(btn_trash)
     conteiner1.appendChild(newElement)
 })
-
-// let newElement = document.createElement("div")
-// newElement.setAttribute("class","curso c1")
-// newElement.innerHTML = "React Native"
-
-// conteiner1.appendChild(newElement)
