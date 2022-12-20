@@ -1,14 +1,14 @@
 // Prática com o método Filter
 
-const boxCursos = document.querySelector("#boxCursos")
+const boxCourse = document.querySelector("#boxCourse")
 const btn_c = [...document.querySelectorAll(".curso")]
 const c1_2 = document.querySelector("#c1_2")
-const cursos = ["HTML","CSS","REACT","RUST","RUBY","ASSEMBLY","PHP"]
-const nameCurso = document.querySelector("#nameCurso")
-const btnSelectedCurso = document.querySelector("#btnSelectedCurso")
-const btnRemoveCurso = document.querySelector("#btnRemoveCurso")
-const btnBefore = document.querySelector("#btnAddNewCursoBefore")
-const btnAfter = document.querySelector("#btnAddNewCursoAfter")
+const coursies = ["HTML","CSS","REACT","RUST","RUBY","ASSEMBLY","PHP"]
+const nameCourse = document.querySelector("#nameCourse")
+const btnSelectedCourse = document.querySelector("#btnSelectedCourse")
+const btnRemoveCourse = document.querySelector("#btnRemoveCourse")
+const btnBefore = document.querySelector("#btnAddNewCourseBefore")
+const btnAfter = document.querySelector("#btnAddNewCourseAfter")
 
 let indice = 0
 
@@ -32,9 +32,9 @@ const createNewCourse=(course)=>{
     return newElement
 }
 
-cursos.map((el, chave)=>{
+coursies.map((el, chave)=>{
     const newElement = createNewCourse(el)
-    boxCursos.appendChild(newElement)
+    boxCourse.appendChild(newElement)
     indice++
 })
 
@@ -46,7 +46,7 @@ const selectedRadio=()=>{
     return selectedRadios[0]
 }
 
-btnSelectedCurso.addEventListener("click",(evt)=>{
+btnSelectedCourse.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
         alert("Selecione algum curso")
@@ -54,7 +54,7 @@ btnSelectedCurso.addEventListener("click",(evt)=>{
     const selectedCourse = sr.parentNode.previousSibling.textContent
 })
 
-btnRemoveCurso.addEventListener("click",(evt)=>{
+btnRemoveCourse.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
         alert("Selecione algum curso")
@@ -69,24 +69,24 @@ btnBefore.addEventListener("click",(evt)=>{
         alert("Selecione algum curso")
     }
     const selectedCourse = sr.parentNode.parentNode
-    if(nameCurso.value.length==0){
+    if(nameCourse.value.length==0){
         alert("Digite algum curso")
     }else{
-        const newCourse = createNewCourse(nameCurso.value)
-        boxCursos.insertBefore(newCourse,selectedCourse)
+        const newCourse = createNewCourse(nameCourse.value)
+        boxCourse.insertBefore(newCourse,selectedCourse)
     }
 })
 
 btnAfter.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
-        alert("Selecione algum curso")
+        alert("Select any course")
     }
     const selectedCourse = sr.parentNode.parentNode
-    if(nameCurso.value.length==0){
-        alert("Digite algum curso")
+    if(nameCourse.value.length==0){
+        alert("write any course")
     } else{
-        const newCourse = createNewCourse(nameCurso.value)
-        boxCursos.insertBefore(newCourse,selectedCourse.nextSibling)
+        const newCourse = createNewCourse(nameCourse.value)
+        boxCourse.insertBefore(newCourse,selectedCourse.nextSibling)
     }
 })

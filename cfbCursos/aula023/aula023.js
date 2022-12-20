@@ -6,7 +6,7 @@ let cursos = ["HTML","CSS","JAVASCRIPT","PHP","REACT","MYSQL","React Native"]
 
 cursos.map((el, chave)=>{
     const newElement = document.createElement("div")
-    newElement.setAttribute("id","c"+chave) // Aduicionando o id dinamicamente
+    newElement.setAttribute("id","c"+chave) // Adicionando o id dinamicamente
     newElement.setAttribute("class", "curso c1")
     newElement.innerHTML = el
 
