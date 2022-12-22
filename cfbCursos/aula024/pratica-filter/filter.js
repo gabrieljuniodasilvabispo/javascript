@@ -49,7 +49,7 @@ const selectedRadio=()=>{
 btnSelectedCourse.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
-        alert("Selecione algum curso")
+        alert("Select any course")
     }
     const selectedCourse = sr.parentNode.previousSibling.textContent
 })
@@ -57,7 +57,7 @@ btnSelectedCourse.addEventListener("click",(evt)=>{
 btnRemoveCourse.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
-        alert("Selecione algum curso")
+        alert("Select any course")
     }
     const selectedCourse = sr.parentNode.parentNode
     selectedCourse.remove()
@@ -66,11 +66,11 @@ btnRemoveCourse.addEventListener("click",(evt)=>{
 btnBefore.addEventListener("click",(evt)=>{
     const sr = selectedRadio()
     if(sr==undefined){
-        alert("Selecione algum curso")
+        alert("Select any course")
     }
     const selectedCourse = sr.parentNode.parentNode
     if(nameCourse.value.length==0){
-        alert("Digite algum curso")
+        alert("write any course")
     }else{
         const newCourse = createNewCourse(nameCourse.value)
         boxCourse.insertBefore(newCourse,selectedCourse)
