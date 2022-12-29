@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples</title>
+    <style>
+        input, div {
+            background-color: lightgray;
+            border-radius: 10px;
+            border: none;
+            height: 40px;
+            width: 100%;
+            font-size: 1.5em;
+        }
+
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        button {
+            margin-top: 5px;
+            margin-right: 5px;
+            padding: 5px;
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <label for="">Valor 1</label> <br>
+    <input type="text" name="valor1" id="valor1"><br>
+
+    <label for="">Valor 2</label><br>
+    <input type="text" name="valor2" id="valor2"><br>
+
+    <label for="">Resultado</label>
+    <div id="res"></div>
+
+    <button id="soma">+</button>
+    <button id="subtracao">-</button>
+    <button id="multiplicacao">X</button>
+    <button id="divisao">/</button>
+
+    <script src="aula028.js"></script>
+</body>
+</html>
