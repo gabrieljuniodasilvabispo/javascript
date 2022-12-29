@@ -6,8 +6,6 @@ const multiplicacao = document.querySelector("#multiplicacao")
 const divisao = document.querySelector("#divisao")
 let res = document.querySelector("#res")
 
-let numeros = [valor1.value, valor2.value]
-
 let op = [
     (v1, v2)=>{
         return Number(v1) + Number(v2)
