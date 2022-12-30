@@ -8,10 +8,10 @@ let res = document.querySelector("#res")
 
 let op = [
     (v1, v2)=>{
-        return Number(v1) + Number(v2)
+        return v1 + v2
     },
     (v1, v2)=>{
-        return Number(v1) - Number(v2)
+        return v1 - v2
     },
     (v1, v2)=>{
         return Number(v1) * Number(v2)
@@ -22,10 +22,10 @@ let op = [
 ]
 
 soma.addEventListener("click",(evt)=>{
-    res.innerHTML = op[0](valor1.value, valor2.value)
+    res.innerHTML = op[0](Number(valor1.value), Number(valor2.value))
 })
 subtracao.addEventListener("click",(evt)=>{
-    res.innerHTML = op[1](valor1.value, valor2.value)
+    res.innerHTML = op[1](Number(valor1.value), Number(valor2.value))
 })
 multiplicacao.addEventListener("click",(evt)=>{
     res.innerHTML = op[2](valor1.value, valor2.value)
