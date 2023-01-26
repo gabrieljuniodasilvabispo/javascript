@@ -3,7 +3,7 @@
 class CarroPadrao{
     // Classe abstrata
     constructor(){
-        if(this.constructor===CarroPadrao){
+        if(this.constructor === CarroPadrao){
             throw new TypeError("Esta classe não pode ser instanciada")
         }
         this.portas = 4
