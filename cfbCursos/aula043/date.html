@@ -11,10 +11,31 @@
             margin: 0;
             padding: 0;
         }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div_relogio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            background-color: #444;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 15px;
+            font-size: larger;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div id="div_data"></div>
+    <div id="div_relogio">00:00:00</div>
     <script src="date.js"></script>
 </body>
 </html>

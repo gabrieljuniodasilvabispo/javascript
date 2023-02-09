@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #888;
+}
+
+#div_relogio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    background-color: #444;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+#tempo_number {
+    border: 1px solid black;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: #aaa;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarme{
+    background-color: #f00 !important;
+}
